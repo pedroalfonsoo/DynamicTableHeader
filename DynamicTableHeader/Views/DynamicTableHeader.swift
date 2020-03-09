@@ -23,6 +23,8 @@ class DynamicTableHeaderViewController: UIViewController, UITableViewDelegate {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.register(DynamicTableViewCell.self, forCellReuseIdentifier: DynamicTableViewCell.cellName)
         table.allowsSelection = false
+        table.rowHeight = UITableView.automaticDimension
+        table.estimatedRowHeight = 10
         return table
     }()
     
@@ -43,8 +45,6 @@ class DynamicTableHeaderViewController: UIViewController, UITableViewDelegate {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 10
         
         view.addSubview(dynamicHeaderView)
         view.addSubview(tableView)
@@ -65,7 +65,6 @@ class DynamicTableHeaderViewController: UIViewController, UITableViewDelegate {
 extension DynamicTableHeaderViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let bounceOffSetAtBottom = scrollView.contentSize.height - scrollView.bounds.height
-        
         let finalOffSet = tableView.contentOffset.y
         let offSet = finalOffSet - initialOffSet
            
