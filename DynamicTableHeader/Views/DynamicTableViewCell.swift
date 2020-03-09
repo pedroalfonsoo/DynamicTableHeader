@@ -27,8 +27,8 @@ class DynamicTableViewCell: UITableViewCell {
         
         cityNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
         cityNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20).isActive = true
-        cityNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        cityNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
+        cityNameLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
+        cityNameLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
     }
     
     required init?(coder: NSCoder) {

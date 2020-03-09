@@ -44,6 +44,7 @@
 			children = (
 				E1707DD824135A9500FB43C5 /* DynamicTableHeader */,
 				E1707DD724135A9500FB43C5 /* Products */,
+				E1ECE70224157B3D00721C4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +85,13 @@
 				E1D8F94624149EA3002D4F6D /* DynamicTableHeaderViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E1ECE70224157B3D00721C4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +226,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "/Users/pedroalfonso/Library/Developer/Xcode/DerivedData/StaticLibrary-eejcffwdmzcuysgyfpkblcykusuw/Build/Products/Debug-iphonesimulator/";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,6 +281,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "/Users/pedroalfonso/Library/Developer/Xcode/DerivedData/StaticLibrary-eejcffwdmzcuysgyfpkblcykusuw/Build/Products/Debug-iphonesimulator/";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,6 +302,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"/Users/pedroalfonso/Library/Developer/Xcode/DerivedData/StaticLibrary-eejcffwdmzcuysgyfpkblcykusuw/Build/Products/Debug-iphonesimulator/",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pedroalfonso24.DynamicTableHeader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -305,10 +319,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TW28WTZGPT;
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = DynamicTableHeader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"/Users/pedroalfonso/Library/Developer/Xcode/DerivedData/StaticLibrary-eejcffwdmzcuysgyfpkblcykusuw/Build/Products/Debug-iphonesimulator/",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pedroalfonso24.DynamicTableHeader;
 				PRODUCT_NAME = "$(TARGET_NAME)";

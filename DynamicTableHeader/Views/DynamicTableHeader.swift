@@ -32,17 +32,19 @@ class DynamicTableHeaderViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
     }
     
     private func setupView() {
+        
         view.backgroundColor = .white
         navigationController?.navigationBar.isTranslucent = false
         title = "City Search"
-          
+        
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 10
         
         view.addSubview(dynamicHeaderView)
         view.addSubview(tableView)
@@ -67,11 +69,11 @@ extension DynamicTableHeaderViewController: UIScrollViewDelegate {
         let finalOffSet = tableView.contentOffset.y
         let offSet = finalOffSet - initialOffSet
            
-        if tableViewTopConstraint.constant - offSet < 0 {
+        if tableViewTopConstraint.constant - offSet <= 0 {
             tableViewTopConstraint.constant = 0
             title = "Dynamic Header View"
             dynamicHeaderView.dismissKeyboard()
-        } else if tableViewTopConstraint.constant - offSet > viewMaxHeight {
+        } else if tableViewTopConstraint.constant - offSet >= viewMaxHeight {
             tableViewTopConstraint.constant = viewMaxHeight
             title = "City Search"
         } else if scrollView.contentOffset.y > 0 && scrollView.contentOffset.y < bounceOffSetAtBottom {
